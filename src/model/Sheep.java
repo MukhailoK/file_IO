@@ -22,6 +22,14 @@ public class Sheep {
         this.passengers = passengers;
     }
 
+    public boolean add(Passenger passenger) {
+        if (passenger != null) {
+            passengers.add(passenger);
+            return true;
+        }
+        return false;
+    }
+
     @Override
     public String toString() {
         return "Sheep{" +

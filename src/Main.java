@@ -16,8 +16,8 @@ public class Main {
 
         SheepInterface sheep = new SheepInterfaceImpl(csvTransformer.transformToListPassengers(passengers));
 
-        csvTransformer.printCells(passengers);
-        
+//        csvTransformer.printCells(passengers);
+        System.out.println(sheep);
         System.out.println("Total fares = " + sheep.calculateTotalFares());
         System.out.println("Average fare for 1 class of travel = " + sheep.calculateAverageFareForFirstClassTravel());
         System.out.println("Average fare for 2 class of travel = " + sheep.calculateAverageFareForSecondClassTravel());

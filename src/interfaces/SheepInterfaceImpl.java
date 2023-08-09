@@ -21,7 +21,7 @@ public class SheepInterfaceImpl implements SheepInterface {
     }
 
     public void addPassenger(Passenger passenger) {
-        sheep.getPassengers().add(passenger);
+        sheep.add(passenger);
     }
 
     public void addPassengers(List<String[]> passengers) {

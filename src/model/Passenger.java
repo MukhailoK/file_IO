@@ -139,20 +139,18 @@ public class Passenger {
 
     @Override
     public String toString() {
-        return "Passenger{" +
-                "id=" + id +
-                ", survived=" + survived +
-                ", passClass=" + passClass +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", gender='" + gender + '\'' +
-                ", age=" + age +
-                ", sibSp=" + sibSp +
-                ", parch=" + parch +
-                ", ticket='" + ticket + '\'' +
-                ", fare=" + fare +
-                ", cabin='" + cabin + '\'' +
-                ", embarked='" + embarked + '\'' +
-                '}';
+        return id +
+                ", " + (survived ? "survived" : "not survived") +
+                ", passClass: " + passClass +
+                ", Name: '" + firstName +
+                ", " + lastName +
+                ", sex: " + gender +
+                ", age: " + age +
+                ", sibSp: " + sibSp +
+                ", parch: " + parch +
+                ", ticket: " + ticket +
+                ", fare: " + fare +
+                ", cabin: " + cabin +
+                ", embarked: " + embarked;
     }
 }

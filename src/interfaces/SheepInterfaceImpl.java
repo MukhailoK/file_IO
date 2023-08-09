@@ -92,10 +92,15 @@ public class SheepInterfaceImpl implements SheepInterface {
         return getQuantityPassengersByPredicate(passenger -> passenger.getAge() != 0 && passenger.getAge() < 18 && !passenger.isSurvived());
     }
 
+    public int totalSurvivedFromFirstClass() {
+        return getQuantityPassengersByPredicate(passenger -> passenger.getPassClass() == 1 && passenger.isSurvived());
+    }
+    public int totalNotSurvivedFromFirstClass(){
+        return getQuantityPassengersByPredicate(passenger -> passenger.getPassClass() == 1 && !passenger.isSurvived());
+    }
 
     private int getQuantityPassengersByPredicate(Predicate<Passenger> predicate) {
         return (int) sheep.getPassengers().stream().filter(predicate).count();
-
 
     }
 

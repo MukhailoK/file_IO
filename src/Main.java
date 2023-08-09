@@ -1,6 +1,7 @@
 import interfaces.SheepInterface;
 import interfaces.SheepInterfaceImpl;
 import ioController.CSVTransformer;
+import model.Passenger;
 
 import java.util.List;
 
@@ -16,8 +17,10 @@ public class Main {
 
         SheepInterface sheep = new SheepInterfaceImpl(csvTransformer.transformToListPassengers(passengers));
 
-//        csvTransformer.printCells(passengers);
-        System.out.println(sheep);
+        for (Passenger passenger : sheep) {
+            System.out.println(passenger);
+        }
+
         System.out.println("Total fares = " + sheep.calculateTotalFares());
         System.out.println("Average fare for 1 class of travel = " + sheep.calculateAverageFareForFirstClassTravel());
         System.out.println("Average fare for 2 class of travel = " + sheep.calculateAverageFareForSecondClassTravel());
@@ -30,6 +33,10 @@ public class Main {
         System.out.println("Not survived women: " + sheep.totalQuantityOfNotSurvivedWomen());
         System.out.println("Survived children: " + sheep.totalQuantityOfSurvivedChildren());
         System.out.println("Not survived children: " + sheep.totalQuantityOfNotSurvivedChildren());
+        System.out.println("Survived from 1 class: " + sheep.totalSurvivedFromFirstClass());
+        System.out.println("Not survived from 1 class: " + sheep.totalNotSurvivedFromFirstClass());
 
+//        Survived from 3 class: 119
+//        Not survived from 3 class: 372
     }
 }

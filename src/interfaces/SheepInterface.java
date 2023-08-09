@@ -33,4 +33,7 @@ public interface SheepInterface extends Iterable<Passenger> {
 
     int totalQuantityOfNotSurvivedChildren();
 
+    int totalSurvivedFromFirstClass();
+
+    int totalNotSurvivedFromFirstClass();
 }
